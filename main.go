@@ -7,7 +7,9 @@ import (
 	"project/Models"
 	"project/Routes"
 )
+
 var err error
+
 func main() {
 	Config.DB, err = gorm.Open("mysql", Config.DbURL(Config.BuildDBConfig()))
 	if err != nil {
@@ -17,5 +19,5 @@ func main() {
 	Config.DB.AutoMigrate(&Models.User{})
 	r := Routes.SetupRouter()
 	//running
-	r.Run(":8090")
+	r.Run(":8080")
 }
