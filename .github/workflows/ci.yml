@@ -4,7 +4,6 @@ jobs:
   build-docker-image:
     runs-on: ubuntu-latest
     name: Build
-    needs: build-image-tag
     steps:
       - name: Checkout inventory repo
         uses: actions/checkout@v3
