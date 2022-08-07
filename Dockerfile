@@ -1,5 +1,6 @@
 FROM node:16.4.2-alpine3.12
 ENV NODE_ENV production
+RUN pwd
 RUN mkdir /app && chown -R node:node /app
 #to copy manifest files from inventory repo to current working directory
 RUN mkdir /app/inventory && chown -R node:node /app/inventory
