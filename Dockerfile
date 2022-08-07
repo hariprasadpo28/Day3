@@ -6,8 +6,6 @@ RUN mkdir /app/inventory && chown -R node:node /app/inventory
 RUN mkdir /app/inventory/build && chown -R node:node app/inventory/build
 WORKDIR /app
 
-RUN npm install
-
 USER node
 COPY Day3/*.js /app
 COPY Day3/inventory/build/*.props /app/inventory/build
