@@ -5,6 +5,8 @@ RUN mkdir /app && chown -R node:node /app
 RUN mkdir /app/inventory && chown -R node:node /app/inventory
 RUN mkdir /app/inventory/build && chown -R node:node app/inventory/build
 RUN ls -l
+RUN cd app
+RUN ls -l 
 WORKDIR /app
 
 USER node
