@@ -1,0 +1,22 @@
+name: Continous Integration
+on: [push]
+jobs:
+  build-docker-image:
+    runs-on: ubuntu-latest
+    name: Build
+    needs: build-image-tag
+    steps:
+      - name: Checkout inventory repo
+        uses: actions/checkout@v3
+        with:
+          repository: aspnet/Security
+          path: inventory
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+      - name: build build docker image
+        uses: docker/build-push-action@v2
+        with:
+          file: Dockerfile
+          tags: "tag1"
+          push: true
