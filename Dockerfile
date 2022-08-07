@@ -9,8 +9,8 @@ RUN ls -l
 WORKDIR /app
 RUN ls -l
 USER node
-COPY Day3/*.js /app
-COPY inventory/build/*.props /app/inventory/build
+COPY /home/runner/work/Day3/Day3/*.js /app
+COPY /home/runner/work/Day3/Day3/inventory/build/*.props /app/inventory/build
 
 
 EXPOSE 8080
