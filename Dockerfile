@@ -4,6 +4,7 @@ RUN mkdir /app && chown -R node:node /app
 #to copy manifest files from inventory repo to current working directory
 RUN mkdir /app/inventory && chown -R node:node /app/inventory
 RUN mkdir /app/inventory/build && chown -R node:node app/inventory/build
+RUN ls -l
 WORKDIR /app
 
 USER node

@@ -18,4 +18,4 @@ jobs:
         with:
           file: Dockerfile
           tags: "tag1"
-          push: true
+          push: false
