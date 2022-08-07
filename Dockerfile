@@ -4,12 +4,12 @@ RUN mkdir /app && chown -R node:node /app
 #to copy manifest files from inventory repo to current working directory
 RUN mkdir /app/inventory && chown -R node:node /app/inventory
 RUN mkdir /app/inventory/build && chown -R node:node app/inventory/build
-
+RUN ls -l
 WORKDIR /app
 RUN ls -l
 USER node
 COPY Day3/*.js /app
-COPY Day3/inventory/build/*.props /app/inventory/build
+COPY inventory/build/*.props /app/inventory/build
 
 
 EXPOSE 8080
