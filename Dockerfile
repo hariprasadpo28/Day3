@@ -7,10 +7,10 @@ ENV NODE_ENV production
 # RUN mkdir /app/inventory/build && chown -R node:node app/inventory/build
 # RUN cd Security/ && ls -l
 RUN pwd
-RUN cd /home/runner/work/Day3/Day3 && ls -l
+RUN cd /home/runner/work/ && ls -l
 RUN ls -l
 # RUN cd /home/runner/work && ls -l
-# WORKDIR /app
+WORKDIR /app
 RUN ls -l
 USER node
 # COPY *.js /app
