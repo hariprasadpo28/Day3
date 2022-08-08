@@ -5,7 +5,9 @@ ENV NODE_ENV production
 # #to copy manifest files from inventory repo to current working directory
 # RUN mkdir /app/inventory && chown -R node:node /app/inventory
 # RUN mkdir /app/inventory/build && chown -R node:node app/inventory/build
-RUN cd Security/ && ls -l
+# RUN cd Security/ && ls -l
+RUN pwd
+RUN cd /home/runner/work/Day3/Day3 && ls -l
 RUN ls -l
 # RUN cd /home/runner/work && ls -l
 # WORKDIR /app
