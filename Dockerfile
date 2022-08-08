@@ -6,12 +6,12 @@ RUN mkdir /app && chown -R node:node /app
 RUN mkdir /app/inventory && chown -R node:node /app/inventory
 RUN mkdir /app/inventory/build && chown -R node:node app/inventory/build
 RUN ls -l
-RUN cd /home/runner/work && ls -l
+# RUN cd /home/runner/work && ls -l
 WORKDIR /app
 RUN ls -l
 USER node
-COPY /home/runner/work/Day3/Day3/*.js /app
-COPY /home/runner/work/Day3/Day3/inventory/build/*.props /app/inventory/build
+COPY *.js /app
+COPY inventory/build/*.props /app/inventory/build
 
 
 EXPOSE 8080
